@@ -5,8 +5,16 @@ const inputField = document.getElementById("inputField");
 const morePictureButton = document.getElementById("morePicture");
 
 function moreClick () {
-    morePictureButton.addEventListener('click', function () {
-        console.log(inputField.value);
+    morePictureButton.addEventListener('click',async function () {
+        const inputValue = inputField.value;
+
+        for (let index = 0; index < inputValue; index++) {
+            const item = document.createElement("img");
+            const picture = await fetchRandomDoggo(projectUrl);
+            item.src = picture.message;
+            flexContainer.appendChild(item);
+            
+        }
     });
 };
 

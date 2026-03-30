@@ -1,6 +1,14 @@
 const pictureButton = document.getElementById("pictureButton");
 const flexContainer = document.querySelector(".flex-container");
 const projectUrl = "https://dog.ceo/api/breeds/image/random";
+const inputField = document.getElementById("inputField");
+const morePictureButton = document.getElementById("morePicture");
+
+function moreClick () {
+    morePictureButton.addEventListener('click', function () {
+        console.log(inputField.value);
+    });
+};
 
 function buttonCLick () {
     pictureButton.addEventListener('click', async function () {
@@ -19,6 +27,7 @@ async function fetchRandomDoggo(url) {
 
 function main () {
     buttonCLick();
+    moreClick();
     
 };
 

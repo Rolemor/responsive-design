@@ -6,7 +6,7 @@
         <script type="module" src="script.js"></script>
     </head>
     <body>
-        <input id="inputField" type="number" min="0" max="5">
+        <input id="inputField" type="number" min="0" max="5" oninput="if(this.value > 5)this.value = 5;">
         <button id="morePicture">Add MORE picture</button>
         <button id="pictureButton">Add picture</button>
         <div class="flex-container">
